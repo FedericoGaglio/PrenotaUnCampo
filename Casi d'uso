@@ -1,0 +1,28 @@
+CASI D'USO PROGETTO PRENOTA UN CAMPO
+
+Caso d'uso UC1: Inserimento nuova Prenotazione, Attore primario: Utente
+fatto   1) L'Utente accede al sistema per prenotare una partita.
+fatto	2) L'Utente sceglie l'attività "Inserimento nuova Prenotazione". Il sistema mostra i campi disponibili.
+fatto	3) L'Utente inserisce la data della Partita, e sceglie il campo.
+fatto	4) L'Utente conferma la prenotazione. Il sistema registra la prenotazione.
+fatto	5) L'Utente indica di aver terminato.
+	
+Caso d'uso UC2: Pagamento, Attore primario: Utente
+	1) Un utente vuole pagare una prenotazione.
+	2) Accede alla lista delle sue prenotazioni.
+	3) Paga online una prenotazione che seleziona dalla lista.
+	4) L'Utente conferma.
+	
+Caso d'uso UC3: Report della prenotazioni, Attore Primario: Presidente
+fatto	Al termine della giornata, il Presidente usa il Sistema per visualizzare informazioni circa le prenotazioni degli utenti.
+		Il Sistema mostra l’elenco dettagliato delle prenotazioni dei giocatori, mostrando per ciascuna prenotazioni: il codice identificativo univoco 
+		della prenotazione.
+
+Caso d'uso UC4: Report degli utenti, Attore Primario: Presidente
+fatto	Al termine della giornata, il Presidente usa il Sistema per visualizzare informazioni circa gli utenti.
+		Il Sistema mostra l’elenco dettagliato degli utenti.
+
+Caso d'uso UC5: Report della prenotazioni, Attore Primario: Utente
+fatto	Al termine della giornata, l'Utente usa il Sistema per visualizzare informazioni circa le sue prenotazioni.
+		Il Sistema mostra l’elenco dettagliato delle prenotazioni dei giocatori, mostrando per ciascuna prenotazionie: il codice identificativo univoco 
+		della prenotazione, l’orario di inizio partita, l’orario di fine partita, il prezzo della partita.
