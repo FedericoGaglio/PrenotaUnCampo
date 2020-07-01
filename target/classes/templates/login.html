@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Login</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="images/pic12.ico" />
+<link rel="stylesheet" href="assets/css/login.css" />
+</head>
+<body>
+
+	<!-- Header -->
+	<header id="header">
+		<a th:href="@{/index}" class="logo">Prenota un campo</a>
+	</header>
+
+
+	<!-- Banner -->
+	<section id="banner">
+		<div class="content">
+			<h2>Accedi/Registrati</h2>
+			<ul class="actions">
+				<li><a href="#one" class="button scrolly">Vai</a></li>
+			</ul>
+		</div>
+	</section>
+	<br></br>
+	<br></br>
+
+	<section id="one">
+
+		<div class="container">
+			<div position="center">
+				<div class="left">
+					<h2>Accedi</h2>
+					<form th:action="@{/login}" method="POST" th:object="${user}">
+						<table>
+							<tr>
+								<td align="center"><label><input type="text"
+										placeholder="Username" th:field="*{username}" required /> </label></td>
+							</tr>
+
+							<tr>
+								<td align="center"><label> <input type="password"
+										placeholder="Password" th:field="*{password}" required /></label></td>
+
+							</tr>
+
+							<tr>
+								<td align="center"><a th:href="@{/benvenuto}"><input
+										type="submit" value="Entra" /></a></td>
+							</tr>
+						</table>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<br></br>
+	<br></br>
+	<section>
+		<div class="container">
+			<div position="center">
+				<div class="left">
+					<h1>Iscriviti ora e prenota i tuoi campi online</h1>
+					<form th:action="@{/registrazioneUtente}" method="POST" th:object="${user}">
+
+						<table>
+
+							<tr>
+								<td align="center"><input type="text" name="nome"
+									placeholder="Nome" th:field="*{nome}" /></td>
+							</tr>
+
+							<tr>
+								<td align="center"><input type="text" name="cognome"
+									placeholder="Cognome" th:field="*{cognome}" /></td>
+							</tr>
+
+							<tr>
+								<td align="center"><input type="text" name="username"
+									placeholder="Username" th:field="*{username}" /></td>
+							</tr>
+
+							<tr>
+								<td align="center"><input type="email" name="email"
+									placeholder="E-mail" th:field="*{email}" /></td>
+							</tr>
+
+							<tr>
+								<td align="center"><input type="password" name="password"
+									placeholder="Password" th:field="*{password}" /></td>
+							</tr>
+
+							<tr>
+								<td align="center"><a th:href="@{/benvenuto}"> <input
+										type="submit" name="signup_submit" value="Registrati" /></a></td>
+							</tr>
+
+							<tr>
+								<td align="center">
+									<div class="policy" style="color: black">
+										<br>Cliccando su "Registrati" dichiari di aver letto
+										eaccettato Privacy policy e Condizioni di utilizzo</br>
+									</div>
+
+									<div class="or" style="color: black">
+										<br>OPPURE accedi con i social network</br>
+									</div>
+									
+									<button class="social-signin facebook">
+											Log in with facebook
+										</button>
+									
+									<button class="social-signin google">Log in with
+										Google+
+									</button>
+								</td>
+							</tr>
+
+						</table>
+				</div>
+
+				</form>
+			</div>
+		</div>
+		</div>
+
+	</section>
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<h2>Contatti</h2>
+			<ul class="actions">
+				<li><a href="mailto:dan.santino@stud.uniroma3.it"
+					itemprop="email">dan.santino@stud.uniroma3.it</a></li>
+				<li><a href="mailto:fed.gaglio@stud.uniroma3.it"
+					itemprop="email">fed.gaglio@stud.uniroma3.it</a></li>
+				<li><span class="icon fa-map-marker"></span> Via Vito Volterra,
+					62, 00146 Roma RM</li>
+			</ul>
+		</div>
+		<div class="copyright">
+			&copy; Daniele Santino-Federico Gaglio. Design <a
+				href="https://templated.co">TEMPLATED</a>. Images <a
+				href="https://www.google.it/imghp?hl=it&tab=wi">Google Immagini</a>.
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>

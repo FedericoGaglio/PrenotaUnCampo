@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>prenotaUnCampo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="images/pic12.ico" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a th:href="@{/index}" class="logo">Prenota un campo</a>
+				<nav class="right">
+					<a th:href="@{/login}" class="button alt">Accedi/Registrati</a>
+				</nav>
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a th:href="@{/index}">Home</a></li>
+					<li><a th:href="@{/chisiamo}">Chi siamo</a></li>
+					<li><a th:href="@{/circoli}">Circoli affiliati</a></li>
+					<!--<li><a href="elements.html">Elements</a></li>-->
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="#" class="button fit">Login</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="content">
+					<h1>Prenota online il tuo sport preferito</h1>
+					<h2>Cerca il campo sportivo più vicino a te</h2>
+					<ul class="actions">
+						<li><a href="#one" class="button scrolly">Scopri di più</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper">
+				<div class="inner flex flex-3">
+					<div class="flex-item left">
+						<div class>
+							<h3>Guarda le disponibilità</h3>
+								<span class="iconbg">
+                        			<i class="fa fa-3x fa-calendar-o"></i>
+                    			</span>
+						</div>
+						<div>
+							<h3>Prenota in tempo reale</h3>
+								<span class="iconbg">
+                        			<i class="fa fa-3x fa-clock-o"></i>
+                    			</span>
+						</div>
+					</div>
+					<div class="flex-item image fit round">
+						<img src="images/pic07.jpg" alt="" />
+					</div>
+					<div class="flex-item right">
+						<div>
+							<h3>Gioca e vinci i nostri premi</h3>
+								<span class="iconbg">
+                        			<i class="fa fa-3x fa-trophy"></i>
+                    			</span>
+						</div>
+						<div>
+							<h3>Mai più inutili telefonate</h3>
+								<span class="iconbg combo">
+                        		<span class="fa-stack fa-lg">
+                            		<i class="fa fa-phone fa-stack-1x"></i>
+                            		<i class="fa fa-ban fa-stack-2x"></i>
+                        		</span>
+                    			</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style1 special">
+				<div class="inner">
+					<h2>Lo sport è la tua passione? Non trovi un campo disponbile?</h2>
+					<figure>
+					    <blockquote>
+					        Prenota le tue partite comodamente dal pc o dal tuo smartphone.<br/>
+					    </blockquote>
+					    <footer>
+					        <cite class="author">Cerca!</cite>
+					        <cite class="author">Scegli!</cite>
+					        <cite class="author">Divertiti!</cite>
+					    </footer>
+					</figure>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper">
+				<div class="inner flex flex-3">
+					<div class="flex-item box">
+						<div class="image fit">
+							<img src="images/pic08.jpg" alt="" />
+						</div>
+						<div class="content">
+							<h3>Calcio</h3>
+							<p>Scegli tra le varie tipologie di campo: calcio a 11, calcetto o calciotto.</p>
+						</div>
+					</div>
+					<div class="flex-item box">
+						<div class="image fit">
+							<img src="images/pic09.jpg" alt="" />
+						</div>
+						<div class="content">
+							<h3>Tennis</h3>
+							<p>Scegli tra i migliori campi in terra battura, erba o cemento.</p>
+						</div>
+					</div>
+					<div class="flex-item box">
+						<div class="image fit">
+							<img src="images/pic10.jpg" alt="" />
+						</div>
+						<div class="content">
+							<h3>Padel</h3>
+							<p>È lo sport del momento, tutti ne parlano, batti contro il vetro!</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<h2>Contatti</h2>
+					<ul class="actions">
+						<li><a href="mailto:dan.santino@stud.uniroma3.it" itemprop="email">dan.santino@stud.uniroma3.it</a></li>
+						<li><a href="mailto:fed.gaglio@stud.uniroma3.it" itemprop="email">fed.gaglio@stud.uniroma3.it</a></li>
+						<li><span class="icon fa-map-marker"></span> Via Vito Volterra, 62, 00146 Roma RM</li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Daniele Santino-Federico Gaglio. Design <a href="https://templated.co">TEMPLATED</a>. Images <a href="https://www.google.it/imghp?hl=it&tab=wi">Google Immagini</a>.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script type='text/javascript' src="assets/js/slider-full.js"></script> 
+
+	</body>
+</html>

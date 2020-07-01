@@ -1,0 +1,133 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+	<head>
+		<title>Benvenuto</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="images/pic12.ico" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+	
+		<!-- Header -->
+			<header id="header">
+				<nav class="left">
+					<a href="#menu"><span>Menu</span></a>
+				</nav>
+				<a th:href="@{/index}" class="logo">Prenota un campo</a>
+				<nav class ="right">
+					<form th:action="@{/index}" method="post"> 
+ 					Benvenuto, <span sec:authentication="name"></span> <input type="submit" value="Esci" /> 
+ 				 	</form> 
+				</nav>
+			</header>
+         
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a th:href="@{/index}">Home</a></li>
+					<li><a th:href="@{'prenotazioni' + '/' + ${session.user.id}}">Le tue prenotazioni</a></li>
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="#" class="button fit">Login</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="content">
+					<ul class="actions">
+						<h1>Ciao <span th:text="${session.user.nome}"></span></h1>
+						<h2>Effettua ora la tua prenotazione</h2>
+						<li><a href="#one" class="button scrolly">VAI!</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper">
+				<div class="inner flex flex-3">
+					<div class="flex-item left">
+						
+					</div>
+					<div class="flex-item image fit round">
+						
+						<div class="section gray-light">
+    <div class="container">    
+                <div class="form-group col-lg-4 col-md-3 col-sm-4 col-xs-12">
+                	<form th:action="@{'addPrenotazione' + '/' + ${session.user.id}}" method="POST">
+	                    <label>Quale campo?</label>
+	                    <select name="campoSelect" class="form-control valid">
+	                        <option th:each="campo : ${campi}" th:value="${campo.id}"><span th:text="${campo.nome}"></span></option>
+	                    </select>
+	       		</div>
+
+
+
+	                <div class="form-group col-lg-2 col-md-3 col-sm-4 col-xs-12 year-from">
+	                    <label>Quando?</label>
+	                    <div id="date">
+	                        <div class="input-group date">
+	                            <input name="quando" type="date" class="form-control" min="2018-06-22" max="9999-12-31"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+	                        </div>
+	                    </div>
+	                    	
+	                    <label>
+	                    <br></br>
+	                    
+	                    <div align ="center">
+	                    	<input type="submit" value="Prenota">
+	                   	</div>
+	                    </label>
+                    </form>
+                </div>
+    </div> 
+</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style1 special" >
+				<div class="inner">
+					<figure>
+					    <blockquote>
+					    	In alto a sinistra trovi l'elenco delle tue prenotazioni, se non l'hai ancora fatto seleziona un campo ed una data.
+					    </blockquote>
+					    <footer>
+					      
+					    </footer>
+					</figure>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<h2>Contatti</h2>
+					<ul class="actions">
+						<li><a href="mailto:dan.santino@stud.uniroma3.it" itemprop="email">dan.santino@stud.uniroma3.it</a></li>
+						<li><a href="mailto:fed.gaglio@stud.uniroma3.it" itemprop="email">fed.gaglio@stud.uniroma3.it</a></li>
+						<li><span class="icon fa-map-marker"></span> Via Vito Volterra, 62, 00146 Roma RM</li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Daniele Santino-Federico Gaglio. Design <a href="https://templated.co">TEMPLATED</a>. Images <a href="https://www.google.it/imghp?hl=it&tab=wi">Google Immagini</a>.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

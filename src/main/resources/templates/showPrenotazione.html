@@ -1,0 +1,16 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Prenotazione</title>
+    <link rel="icon" href="images/pic12.ico" />
+</head>
+<body>
+    <div>
+    	<h4>Prenotazione</h4>
+		<div>
+			<span th:each="prenotazione : ${prenotazioni}"></span>
+			<span th:text="${prenotazione.id}"></span>
+   		</div>
+    </div>
+</body>
+</html>

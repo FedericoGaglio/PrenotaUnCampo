@@ -1,0 +1,107 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+<title>Riepilogo</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" href="images/pic12.ico" />
+<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="subpage">
+
+	<!-- Header -->
+	<header id="header">
+		<a th:href="@{/index}" class="logo">Prenota un campo</a>
+		
+		<nav class ="right">
+			<form th:action="@{/index}" method="post"> 
+ 				<span sec:authentication="name">
+ 				</span> <input type="submit" value="Esci" /> 
+ 			 </form> 
+		</nav>
+	</header>
+
+
+	<!-- Main -->
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<header class="align-center">
+				<h1>Ciao <span th:text="${session.user.nome}"></span></h1>
+				<p>Ecco l'elenco di tutte le prenotazioni e di tutti gli utenti</p>
+			</header>
+			<div class="image fit"></div>
+			<div class="table-wrapper">
+				<table>
+					<thead>
+						<tr>
+							<th>Id Utente</th>
+							<th>Username Utente</th>
+						</tr>
+					</thead>
+					<tbody>
+						<h1>Tutti gli utenti</h1>
+
+						<table>
+							<tr th:each="utente : ${utenti}">
+								<td><a th:text="${utente.id}"></a></td>
+								<td><a th:text="${utente.nome}"></a></td>
+							</tr>
+						</table>
+
+						<h1>Tutte le prenotazioni</h1>
+
+						<table>
+							<thead>
+								<tr>
+									<th>Id Prenotazione</th>
+									<th>Username Utente</th>
+									<th>Id Utente</th>
+								</tr>
+							</thead>
+							<tr th:each="prenotazione : ${prenotazioni}">
+								<td><a th:text="${prenotazione.id}"></a></td>
+								<td><a th:text="${prenotazione.utente.nome}"></a></td>
+								<td><a th:text="${prenotazione.utente.id}"></a></td>
+							</tr>
+						</table>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<h2>Contatti</h2>
+			<ul class="actions">
+				<li><a href="mailto:dan.santino@stud.uniroma3.it"
+					itemprop="email">dan.santino@stud.uniroma3.it</a></li>
+				<li><a href="mailto:fed.gaglio@stud.uniroma3.it"
+					itemprop="email">fed.gaglio@stud.uniroma3.it</a></li>
+				<li><span class="icon fa-map-marker"></span> Via Vito Volterra,
+					62, 00146 Roma RM</li>
+			</ul>
+		</div>
+		<div class="copyright">
+			&copy; Daniele Santino-Federico Gaglio. Design <a
+				href="https://templated.co">TEMPLATED</a>. Images <a
+				href="https://www.google.it/imghp?hl=it&tab=wi">Google Immagini</a>.
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
